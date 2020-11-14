@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="yosemite is national park california">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Yosemite </title>
+        <link rel="stylesheet" href="Normalize.css">
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            .container {width: 1350px; margin: auto;}
+            /* the header */
+            header {background-color: #1B1B1B; overflow: hidden;}
+            header #set, header nav {float: left;}
+            header #set {width: 20%;}
+            header #set img {padding: 30px 0px 0px 50px;}
+            header nav ul li {list-style: none; display: inline-block; padding: 30px 15px 0px 35px;}
+            header nav ul li a {text-decoration: none; color: #707070;}
+            header nav ul li #bold {font-weight: bold; letter-spacing: 7px; font-size: 22px; color: #FFFFFF;}
+            header #social-media {clear: both;}
+            header #social-media, header #head-pic {float: left;}
+            header #social-media {width: 10%; margin-top: 220px;}
+            header #social-media ul li {list-style: none; padding: 30px 0px 0px 50px;} 
+            header #social-media ul li img {border-radius: 50px; }
+            header #head-pic {margin-top: 30px;}
+            header #head-pic img {width:1210px; height:700px;}
+            header #head-pic #pic-list {margin-top: -55px; text-align: right;}
+            header #head-pic #pic-list img {width: 220px; height: 110px; padding: 0px 0px 0px 5px;}
+            #title {overflow: hidden; display: inline;}
+            #title h1{color: #FFFFFF; letter-spacing: 18px; font-size: 70px; text-align: center; margin-left: 120px; margin-top: -430px;}
+            #title p {color: #FFFFFF; margin-top: -25px;  text-align: center; margin-left: 100px;}
+            #title a {text-decoration: none; color: #1B1B1B; background-color: #FAB437; padding: 10px; margin: 215px 0px 0px 135px;display: inline-block;}
+            /* the valley */
+            #valley {overflow: hidden;  background-color: #1B1B1B; height: 580px;}
+            #valley .part1, #valley .part2  {float: left; margin-top: 150px; width: 50%;}
+            #valley .part1 {color: #FFFFFF; font-size: 35px; text-align: right; margin-left: -100px; line-height: 50px;}
+            #valley .part1 hr {width: 30px; display: inline-block; direction: rtl; margin-top: 10px;}
+            #valley .part2 {color: #707070; margin-left: 100px; line-height: 25px; font-size: 18px;}
+            #valley .part2 a {text-decoration: none; color: #FFFFFF;}
+            /* the view with waterfalls */
+            #view, #trip {overflow: hidden; }
+            #view .part1, #view .part2, #trip .part1, #trip .part2 {float: left;  width: 50%;}
+            #view .part1 img, #trip .part1 img {position: absolute; margin-top: -120px; margin-left: 130px;}
+            #view .part2, #trip .part2 {margin-left: 670px; margin-top: 100px;} 
+            #view .part2 h2, #waterfalls .part1 h2, #trip .part2 h2 {letter-spacing: 10px;}
+            #view .part2 span,  #waterfalls .part1 span, #trip .part2 span {letter-spacing: 3px; color: #707070;}
+            #view .part2 p,  #waterfalls .part1 p, #trip .part2 p {color: #707070; line-height: 30px;font-size: 18px;}
+            #view .part2 a,  #waterfalls .part1 a, #trip .part2 a {text-decoration: none; color: #1B1B1B; font-size: 18px; font-weight: bold;}
+            /* Giant Sequoias */
+            #giant_sequoias {overflow: hidden;}
+            #giant_sequoias #vedio iframe {margin-top: 200px; margin-left:75px ;}
+            #giant_sequoias #gs {background-color: rgba(0,0,0,0.9); display: inline-block; position: absolute;
+                 margin-left: 150px; margin-top: -60px; border-radius: 5px; width:550px ;}
+            #giant_sequoias #gs span, #map #area span  {color: #FFFFFF; font-size: 20px; font-weight:400; letter-spacing: 3px; 
+                padding-left: 40px;}
+            #giant_sequoias #gs p, #map #area p {line-height: 30px; color: #707070; padding: 20px 0px 20px 40px;}
+            /* The Waterfalls */
+            #waterfalls .part1 {margin-top: 250px;  margin-left: 130px;}
+            #waterfalls .part2  {direction: rtl;}
+            #waterfalls .part2  img {position: absolutes; margin-right: 130px; margin-top: -400px;}
+            /* The Experience */
+            #experience {overflow: hidden; margin-top: -120px;}
+            #experience #find {text-align: center;height: 1650px; width:1200px; margin-left: 75px; background-color:#1B1B1B;}
+            /*  background-image: url("https://www.topozone.com/wp-content/uploads/2017/05/bigs-Half-Dome-Half-Lit-up-with-Evening-Light-Yosemite-Valley-CA-Large-e1494023820610.jpg");*/
+            #experience #find h2 {letter-spacing: 8px; color:#FFFFFF; padding-top: 200px; padding-bottom: 5px;}
+            #experience #find #text {color: #FFFFFF; padding-bottom: 20px; letter-spacing: 2px;}
+            #experience #category img {width: 300px; height: 200px;}
+            #experience #category {margin-left: 90px;}
+            #experience #category .cate1, #experience #category .cate2, #experience #category .cate3 
+            {float: left; margin: 15px 5px 0px 25px ; text-align: left;}
+            #experience #category span {color: #FFFFFF; letter-spacing: 2px;font-size: 20px; font-weight: bold;}
+            #experience #category p {color: #707070 ; font-size: 13px; line-height: 20px;}
+            #experience #category a {text-decoration: none; color: #FFFFFF; font-weight: bold; font-size: 13px;}
+            /* The Wildlife */
+            #wildlife {overflow: hidden;}
+            #wildlife #wildlife_pic {margin-left: 180px; position: absolute; margin-top: -900px;}
+            #wildlife #wildlife_text {background-color: rgba(0,0,0,0.9); display: inline-block; position: absolute;
+             border-radius: 5px; width:550px; margin-left: 570px; margin-top: -450px;}
+            #wildlife #wildlife_text span {color: #FFFFFF; font-size: 20px; font-weight:400; letter-spacing: 3px; 
+                padding-left: 40px;}
+            #wildlife #wildlife_text p {line-height: 30px; color: #707070; padding: 20px 0px 20px 40px;}
+            /* the stories */
+            #story {overflow: hidden; margin-top: 150px;}
+            #story #stories {text-align: center;}
+            #story #stories h2 {letter-spacing: 8px; margin-bottom: 7px;}
+            #story #stories span {letter-spacing: 3px; color: #707070;}
+            #story .photo{display: none; margin-left: 70px;}
+            #story .photo img {width: 300px; height: 200px; padding: 15px;}
+            #story #buttons {text-align: center; margin-top: 10px;}
+            #story #buttons button {width: 50px;}
+            /* the map */
+            #map #mapp {margin-left: 180px; margin-top: 100px;}
+            #map #area {background-color: rgba(0,0,0,0.9); display: inline-block; position: absolute;
+                 margin-left: 250px; margin-top: -60px; border-radius: 5px; width:550px ;}
+            /* the footer */
+            footer {margin-top: 150px;}
+            footer #foot {background-color:#1B1B1B; text-align: center; border-radius: 10px; margin-bottom: 10px;
+            width: 1300px; margin-left: 25px;}
+            footer #foot h3 {letter-spacing: 5px; color: #FFFFFF; padding: 100px 0px 50px 0px; }
+            footer #foot ul li {list-style: none; display: inline-block; padding: 20px;}
+            footer #foot ul li a {text-decoration: none; color: #FFFFFF; font-size: 16px; letter-spacing: 3px;}
+            footer #foot p {color: #707070; padding: 50px 0px; font-size: 15px; letter-spacing: 2px;}
+            footer #foot #media img { border-radius: 50px;margin-bottom: 40px;}
+            
+
+            /* For tablets: */
+            @media only screen and (max-width:800px) {
+                header, #title, #valley, #view, #giant_sequoias, #waterfalls, #experience, #wildlife, #trip 
+                 {width: 100%; padding: 0;}}
+            /* For mobile phones: */
+            @media only screen and (max-width:500px) {header, #title, #valley, #view, #giant_sequoias, 
+                #waterfalls, #experience, #wildlife, #trip {width: 100%;}}
+        </style>
+    </head>
+    <body>
+        <!-- the start of HEADER -->
+        <header>
+            <!-- the setting pic -->
+            <div class="container">
+                <div id="set">
+                    <a href="#"> <img src="https://i.pinimg.com/564x/92/81/8e/92818eedd04b37b3f05fd467d16c529a.jpg" width="30px" height="30px"> </a>
+                </div>
+                <!-- the start of nav bar -->
+                <nav>
+                    <ul>
+                        <li> <a href="#"> THE MOUNTAIN </a> </li>
+                        <li> <a href="#"> EXPERIENCE </a> </li>
+                        <li> <a href="file:///C:/Users/yomna/OneDrive/Desktop/ITI/CST/Yomna%20Projects/YOSEMITE%20website/yosemite.html" id="bold"> YOSEMITE </a> </li>
+                        <li> <a href="#"> HISTORY </a> </li>
+                        <li> <a href="#"> YOUR TRIP </a> </li>
+                    </ul>
+                </nav>
+                <!-- the end of nav bar -->
+                <!-- the start of Social Media Icons -->
+                <div id="social-media"> 
+                    <ul>
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/5b/13/26/5b13266f36e91c0be5c842874c0f1e5a.jpg" width="20px" height="20px"></a></li>
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/39/4a/7a/394a7aaecd6b8ce44528649681d9fa05.jpg" width="20px" height="20px"></a></li>
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/01/ad/2f/01ad2fe48b58edfdfe3ff03adfd95312.jpg" width="20px" height="20px"></a></li>
+                    </ul>
+                </div>
+                <!-- the end of Social Media Icons -->
+                <!-- the start of droplist -->
+                <div id="head-pic">
+                    <img class="slides" src="https://free4kwallpapers.com/uploads/originals/2016/02/14/tunnel-view-yosemite-national-park-wallpaper.jpg" > 
+                    <img class="slides" src="https://www.theintrepidguide.com/wp-content/uploads/2018/12/Yosemite-Itinerary-Best-Viewpoints-in-Yosemite-Top-Things-to-do-Yosemite.jpg" style="display: none">
+                    <img class="slides" src="https://content.paulreiffer.com/wp-content/uploads/2015/12/Yosemite-National-Park-Valley-Mirror-Lake-Half-Dome-Rock-Sunset-Frost-Winter-Paul-Reiffer-Professional-Landscape-Photographer.jpg" style="display: none;">
+
+                    <div id="pic-list">
+                        <img class="demo" src="https://free4kwallpapers.com/uploads/originals/2016/02/14/tunnel-view-yosemite-national-park-wallpaper.jpg" onclick="currentDiv(2)">
+                        <img class="demo" src="https://www.theintrepidguide.com/wp-content/uploads/2018/12/Yosemite-Itinerary-Best-Viewpoints-in-Yosemite-Top-Things-to-do-Yosemite.jpg"  onclick="currentDiv(3)">
+                        <img class="demo" src="https://content.paulreiffer.com/wp-content/uploads/2015/12/Yosemite-National-Park-Valley-Mirror-Lake-Half-Dome-Rock-Sunset-Frost-Winter-Paul-Reiffer-Professional-Landscape-Photographer.jpg" onclick="currentDiv(1)">
+                    </div>
+                  </div>
+                </div>
+                <!-- the end of droplist -->
+            </div>
+        </header>
+        <!-- the end of HEADER -->
+
+        <!-- the statr of Titile -->
+        <div id="title">
+            <div class="container">
+                <h1>YOSEMITE</h1>
+                <p>NATIONAL PARK CALIFORNIA</p>
+                <a href="#"><img src="">✈ START YOUR TRIP</a>
+            </div>
+        </div>
+        <!-- the end of Titile -->
+        <!-- the start of Valley -->
+        <div id="valley">
+            <div class="container">
+                <div class="part1">
+                    <span>THE GRAND <br> VALLEY SINCE <br> 1864</span>
+                    <hr>
+                </div>
+                <div class="part2">
+                    <p>Not just a great valley, but a shrine to human foresight, the strength
+                    <br>of granite, the power of glaciers, the presistence of life, and the
+                    <br>tranquility of the High Sierra. First protected in 1864, Yosemite 
+                    <br>NAtional Park is best known for its waterfalls, but within its nearly
+                    <br> 1,200 square miles, you can find deep valleys, grand meadows, 
+                    <br>acient giant sequoias, a vast wilderness area, and more.</p><br>
+                    <a href="#"><b>EXPLORER YOSEMITE &nbsp; &nbsp; ➡</b></a>
+                </div>
+            </div>
+        </div>
+        <!-- the end of Valley -->
+        <!-- the start of views -->
+        <div id="view">
+            <div class="container">
+                <div class="part1">
+                    <img src="https://i.pinimg.com/564x/eb/d2/ef/ebd2ef5c667b942b198388a0d1c0576b.jpg" width="450px" height="600px">
+                </div>
+                <div class="part2">
+                    <h2>THE VIEWS</h2>
+                    <span>ENJOY OF THE VIEWS OF A LIFETIME</span><br><br>
+                    <p>Million of visitors come to California's Yosemite National Park
+                    <br>each year to see, and even climb, the Yosemite Valley's awe 
+                    <br>inspiring rock formation. Towering sheer cliffs striped with ribbons 
+                    <br>of flowing waterfalls rise from the valley's floor, creating dazzling
+                    <br>photo opportunities and thrilling nature lovers. in the summer
+                    <br>months visitors can view it all from Glacier Point.</p><br>
+                    <a href="#">POINTS OF INTEREST &nbsp; &nbsp; ➡</a>
+                </div>
+            </div>
+        </div>
+        <!-- the end of views -->
+        <!-- the start of Giant Sequoias -->
+        <div id="giant_sequoias">
+            <div class="container">
+                <div id="vedio">
+                    <iframe width="1200" height="500" src="https://www.youtube.com/embed/N6-2fVsFV8E" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                </div>
+                <div id="gs">
+                    <br><span>GIANT SEQUOIAS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⬅ | ➡</span>
+                    <p>The Giant Sequoias, A true testament to the beauty that
+                    <br>comes from responsible stewardship of nature</p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of Giant Sequoias -->
+        <!-- the start of Waterfalls -->
+        <div id="waterfalls">
+            <div class="container">
+                <div class="part1">
+                    <h2>WATERFALLS</h2>
+                    <span>THE SHEER FORCE OF WATER IN MOTION</span></br><br>
+                    <P>Yosemite National Park is home to thousands of waterfalls, from
+                    <br>towering spectacles with a half-mile os cascading water, to tiny
+                    <br>streams of white that drop only a few feet. Springs is the best time
+                    <br>to experience Yosemite's waterfalls, when the winter's massive
+                    <br>snowfall melts away and heads toward the Pacific Ocean.</P><br>
+                    <a href="#">POINTS TO INTEREST &nbsp; &nbsp; ➡</a>
+                </div>
+                <div class="part2">
+                    <img src="https://i.pinimg.com/564x/fc/2c/d8/fc2cd810d1fcee462f93a0184f333f97.jpg" width="450px" height="600px">
+                </div>
+            </div>
+        </div>
+        <!-- the end of Waterfalls -->
+        <!-- the start of experience -->
+        <div id="experience">
+            <div class="container">
+                <div id="find">
+                    <div>
+                        <h2>EXPERIENCE</h2>
+                        <p id="text">YOSEMITE NATIONAL PARK</p>
+                    </div>
+                    <div id="category">
+                        <div class="cate1">
+                            <img src="https://www.outdoorwomensalliance.com/wp-content/uploads/2016/01/half-dome-yosemite-valley-visitation.jpg"><br><br>
+                            <span>EXPLORE THE VALLEY</span><br><br>
+                            <p>Nunc nec nisl mattis, aliquam erat et, porta ligula.
+                            <br>Etiam facilisis faucibus mollis. Maecenas convallis
+                            <br>quam feugiat, ullamcorper mi at, tempor justo.</p><br>
+                            <a href="#">EXPLORE THE VALLEY ➡</a>
+                        </div>
+                        <div class="cate2">
+                            <img src="https://mediaim.expedia.com/localexpert/304202/2c2a841e-f8e1-4d82-af0a-b0540e720c96.jpg">
+                            <br><br>
+                            <span>EXPERIENCE ADVENTURE</span><br><br>
+                            <p>Nunc nec nisl mattis, aliquam erat et, porta ligula.
+                            <br>Etiam facilisis faucibus mollis. Maecenas convallis
+                            <br>quam feugiat, ullamcorper mi at, tempor justo.</p><br>
+                            <a href="#">EXPERIENCE ADVENTURE ➡</a>
+                        </div>
+                        <div class="cate3">
+                            <img src="https://i.pinimg.com/originals/dd/91/f8/dd91f85a4c4e0c403a6ddc9bf57eb6ca.jpg"><br><br>
+                            <span>WINTER IS COMING</span><br><br>
+                            <p>Nunc nec nisl mattis, aliquam erat et, porta ligula.
+                            <br>Etiam facilisis faucibus mollis. Maecenas convallis
+                            <br>quam feugiat, ullamcorper mi at, tempor justo.</p><br>
+                            <a href="#">DISCOVER WINTER ➡</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- the end of experience -->
+        <!-- the start of wildlife -->
+        <div id="wildlife">
+            <div class="container">
+                <div id="wildlife_pic">
+                <img src="https://43d897265kne3ed0qv2ecjw2-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/21248077_web1_Yosemite1-Print.jpg" width="1000px" height="500px">
+                </div>
+                <div id="wildlife_text">
+                    <br><span>WILDLIFE &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; ⬅ | ➡</span>
+                    <p>the expansive forests and a varity of rich habitats within Yosemite
+                    <br>National Park hold over 400 animal species. Black bear, mule deer,
+                    <br>foxes, and other mammals can be found throughout the Yosemite
+                    <br>Valley. At higher elevations, the endangered Sierra Nevada big horn
+                    <br>sheet can occasionally be spotted in the northeastern part.</p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of wildlife -->
+        <!-- the start of the trip -->
+        <div id="trip">
+            <div class="container">
+                <div class="part1">
+                    <img src="https://i.pinimg.com/564x/4b/e2/22/4be2227b4c327c2cf36906e20f751c92.jpg" width="450px" height="600px">
+                </div>
+                <div class="part2">
+                    <h2>YOUR TRIP</h2>
+                    <span>DISCOVER THE VALLEY OF YOUR LIFE</span><br><br>
+                    <p>With a bit of planning and some helpful tips, your experience
+                    <br>at Yosemite National Park will be easier, safer, and more fun. 
+                    <br>We recommend looking through all of the tips as you plan your
+                    <br>trip. Also familiarize yourself with Yosemite's seasons, which can
+                    <br>be quite different than what you experience at home. With a great 
+                    <br>plan and a smart way to get from place to place, you'll be ready to
+                    <br>start exploring the moment you arrive</p><br>
+                    <a href="#">POINTS OF INTEREST &nbsp; &nbsp; ➡</a>
+                </div>
+            </div>
+        </div>
+        <!-- the end of the trip -->
+        <!-- the start of stories -->
+        <div id="story">
+            <div class="container">
+                <div id="stories">
+                    <h2>STORIES</h2>
+                    <span>EXPERIENCES FROM TRAVELLERS</span>
+                </div><br><br>  
+                <div class="photo">
+                    <img src="https://madera.objects.liquidweb.services/photos/15064-dogs-pet-friendly-glacier-point-yosemite-ca-photo-credit-breeze-turner-7-Rectangle-600x400.jpg">
+                    <img src="https://content.paulreiffer.com/wp-content/uploads/2019/11/Paul-Reiffer-The-Faraway-Tree-Meadow-Yosemite-National-Park-Photographic-Workshops-Location-California-500x333.jpg">
+                    <img src="https://images.squarespace-cdn.com/content/v1/51e613ebe4b038b7a6670308/1508176626822-2H0Y5BT7XKCGLDPMK6AZ/ke17ZwdGBToddI8pDm48kGXoD000J7kx3NE7W-LXpdwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcSHIBb6yNmvYkAyvF3loIw6LWPhmq3jJqr-f9nvyP7bW--NA7--1aw0mnW_uWXk87/Debra+Alison+Yosemite+Adventure+Photography">
+                    <img src="https://content.paulreiffer.com/wp-content/uploads/2019/11/Paul-Reiffer-Firefall-Horsetail-Falls-Fire-Yosemite-El-Capitan-Snow-Valley-Winter-National-Park-Photographic-Workshops-Location-California-500x333.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://content.paulreiffer.com/wp-content/uploads/2019/11/Paul-Reiffer-Mono-Lake-Tufa-Sunrise-Close-Long-Exposure-Sky-National-Park-Photographic-Workshops-Location-California-500x333.jpg">
+                    <img src="https://sun-surfer.com/photos/2012/08/Yosemite-National-Park-California.jpg">
+                    <img src="https://content.paulreiffer.com/wp-content/uploads/2019/11/Paul-Reiffer-Mono-Lake-Tufa-Sunset-Pink-Sky-Rocks-Formation-Salt-Saline-State-Reserve-Park-Photographic-Workshops-Location-California-500x333.jpg">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/4b/3e/fd/a-perfect-view-of-bridalveil.jpg">
+                </div>
+                <div id="buttons">
+                    <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        <!-- the end of stories -->
+        <!-- the start of map -->
+        <div id="map">
+            <div class="container">
+                <div id="mapp">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d403237.0378334575!2d-119.83130655347982!3d37.8535193892948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096f09df58aecc5%3A0x2d249c2ced8003fe!2sYosemite%20National%20Park!5e0!3m2!1sen!2seg!4v1605276348870!5m2!1sen!2seg"
+                     width="1000" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div id="area">
+                    <br><span>HIGH SIERRA CAMP AREA  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⬅ | ➡</span>
+                    <p>This map includes High Sierra Camps, Tuolumne Meadows Lodge,
+                    <br>and white wolf Lodge spots.</p>
+                </div>
+            </div>
+        </div>
+        <!-- the end of map -->
+        <!-- the start of footer -->
+        <footer>
+            <div class="container">
+                <div id="foot">
+                    <h3>EXPERIENCE YOSEMITE</h3>
+                    <ul id="links">
+                        <li><a href="#">ACCESSIBILTY</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#">FOIA</a></li>
+                        <li><a href="#">NOTICES</a></li>
+                        <li><a href="#">DISCLAIMER</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">USA.GOV</a></li>
+                    </ul>
+                    <p>NATIONAL PARK SERVICES U.S. DEPARTMENT OF THE INTERIOR</p>
+                    <ul id="media">
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/5b/13/26/5b13266f36e91c0be5c842874c0f1e5a.jpg" width="20px" height="20px"></a></li>
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/39/4a/7a/394a7aaecd6b8ce44528649681d9fa05.jpg" width="20px" height="20px"></a></li>
+                        <li><a href="#"><img src="https://i.pinimg.com/564x/01/ad/2f/01ad2fe48b58edfdfe3ff03adfd95312.jpg" width="20px" height="20px"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+
+    </body>
+    <script defer>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000);
+        }
+        //***********************//
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var j;
+        var y = document.getElementsByClassName("photo");
+        if (n > y.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = y.length}
+        for (j = 0; j < y.length; j++) {
+            y[j].style.display = "none";  
+        }
+        y[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</html>
